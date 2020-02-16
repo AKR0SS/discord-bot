@@ -51,6 +51,9 @@ client.on('message', message => {
         else if (command === 'play') {
             client.commands.get('play').execute(message, args);
         }
+        else if (command === 'stop') {
+            client.commands.get('stop').execute(message, args);
+        }
 // ADMINISTRATOR
     else if (message.member.hasPermission('ADMINISTRATOR')) {
         if (command === 'kick') {
