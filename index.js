@@ -8,7 +8,7 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 
 // creates new Discord client
-const client = new Discord.Client();
+var client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 // Array of file names
@@ -34,6 +34,8 @@ client.once('ready', () => {
     client.user.setActivity('in development :)')
 });
 
+var servers = {};
+
 // Listens for messages
 client.on('message', message => {
     // Ignores messages without prefix
@@ -44,30 +46,32 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
     
 // @EVERYONE
-    if (command === 'help') {
-        client.commands.get('help').execute(message, args);
-    }
+    switch(command) {
+        case 'help':
+            client.commands.get('help').execute(message, args);
+            break;
         // MUSIC
-        else if (command === 'play') {
+        case 'play':
             client.commands.get('play').execute(message, args);
-        }
-        else if (command === 'stop') {
-            client.commands.get('stop').execute(message, args);
-        }
-// ADMINISTRATOR
-    else if (message.member.hasPermission('ADMINISTRATOR')) {
-        if (command === 'kick') {
-            client.commands.get('kick').execute(message, args);
-        }
-        // DEFAULT
-        else {
-            return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
-        }
+            break;
+        case 'stop':
+            break;
+        default:
+    // ADMINISTRATOR
+            if (message.member.hasPermission('ADMINISTRATOR')) {
+                switch(command) {
+                    case 'kick':
+                        client.commands.get('kick').execute(message, args);
+                        break;
+                    default:
+                        return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
+                }
+            }
+            else
+                return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
     }
-    //DEFAULT
-    else {
-        return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
-    }
+
+    //message.channel.send("```DEBUG```" + `\nCommand name: ${command}\nArguments: ${args}`);
 });
 
 // Discord login with app's token
