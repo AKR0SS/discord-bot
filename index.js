@@ -31,6 +31,7 @@ client.once('ready', () => {
     '/        NOW ONLINE         /\n',
     '/                           /\n',
     '/***************************/');
+    client.user.setActivity('in development :)')
 });
 
 // Listens for messages
