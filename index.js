@@ -15,7 +15,10 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
+    const command = require(`./commands/${file}`);
+    
+    // set a new item in the Collection
+	// with the key as the command name and the value as the exported module
 	client.commands.set(command.name, command);
 }
 
@@ -38,34 +41,29 @@ client.on('message', message => {
     // Array of entered command
     const args = message.content.slice(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
-
+    
 // @EVERYONE
-    // HELP
-    if (message.content.startsWith(`${prefix}help`)) {
+    if (command === 'help') {
         client.commands.get('help').execute(message, args);
     }
-    // MUSIC
-    if (message.content.startsWith(`${prefix}play`)) {
-        client.commands.get('play').execute(message, args);
-    }
-// ADMINISTRATOR COMMANDS
+        // MUSIC
+        else if (command === 'play') {
+            client.commands.get('play').execute(message, args);
+        }
+// ADMINISTRATOR
     else if (message.member.hasPermission('ADMINISTRATOR')) {
-    // KICK
-        if (message.content.startsWith(`${prefix}kick`)) {
+        if (command === 'kick') {
             client.commands.get('kick').execute(message, args);
-        } 
-    // DEFAULT
+        }
+        // DEFAULT
         else {
             return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
         }
     }
-// DEFAULT
+    //DEFAULT
     else {
         return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
     }
-
-    //message.channel.send("\n" + "```debug```" + `\tCommand: ${command} \n\tArguments: ${args}`)
-    //console.log(message.content);
 });
 
 // Discord login with app's token
