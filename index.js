@@ -31,7 +31,7 @@ client.once('ready', () => {
     '/        NOW ONLINE         /\n',
     '/                           /\n',
     '/***************************/');
-    client.user.setActivity('in development :)')
+    client.user.setActivity("Akross's alt ego")
 });
 
 var servers = {};
@@ -42,7 +42,7 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     // Array of entered command
-    const args = message.content.slice(prefix.length).split(' ');
+    const args = message.content.substring(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
     
 // @EVERYONE
@@ -52,9 +52,10 @@ client.on('message', message => {
             break;
         // MUSIC
         case 'play':
-            client.commands.get('play').execute(message, args);
+            client.commands.get('play').execute(message, args, servers);
             break;
-        case 'stop':
+        case 'skip':
+            client.commands.get('skip').execute(message, args, servers);
             break;
         default:
     // ADMINISTRATOR
@@ -71,7 +72,7 @@ client.on('message', message => {
                 return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
     }
 
-    //message.channel.send("```DEBUG```" + `\nCommand name: ${command}\nArguments: ${args}`);
+    //message.channel.send("```DEBUG```" + `\nCommand: ${command}\n Arguments: ${args}`);
 });
 
 // Discord login with app's token
