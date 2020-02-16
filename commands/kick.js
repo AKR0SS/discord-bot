@@ -11,6 +11,6 @@ module.exports  = {
 			message.channel.send(`${taggedUser.username} has been niggered :)`)
 		}
 		else
-			message.channel.send('Please @ someone before you try kicking :)')
+			message.channel.send('Please @ someone before you try kicking retard :)')
 	}
 }
