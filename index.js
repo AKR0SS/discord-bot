@@ -44,6 +44,10 @@ client.on('message', message => {
     if (message.content.startsWith(`${prefix}help`)) {
         client.commands.get('help').execute(message, args);
     }
+    // MUSIC
+    if (message.content.startsWith(`${prefix}play`)) {
+        client.commands.get('play').execute(message, args);
+    }
 // ADMINISTRATOR COMMANDS
     else if (message.member.hasPermission('ADMINISTRATOR')) {
     // KICK
