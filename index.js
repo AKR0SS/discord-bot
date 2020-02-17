@@ -51,7 +51,7 @@ client.on('message', message => {
             client.commands.get('help').execute(message, client);
             break;
         case 'join':
-            client.commands.get('join').execute(message);
+            client.commands.get('join').execute(message, client);
             break;
         // MUSIC
         case 'play':
