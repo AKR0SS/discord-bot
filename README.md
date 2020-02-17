@@ -1,19 +1,20 @@
 # Discord Bot
 
-## Command Prefix: |
+
 
 uh, there's totally no bad words in here :)
 
 ## Command list
 
+### Command Prefix: |
 
-### @EVERYONE commands:
+#### @EVERYONE commands:
 * help command: `help`
 * join voice channel: `join`
 * plays a YouTube video: `play [YouTube link]`
 * skips current queue'd song: `skip`
 
-### @ADMINISTRATOR commands
+#### @ADMINISTRATOR commands
 * kicks mentioned user: `kick [@user]`
 ## 
 
