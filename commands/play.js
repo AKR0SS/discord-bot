@@ -9,17 +9,17 @@ module.exports = {
         // VoiceChannel gets the user's current voice channel
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
 
-        // Checks if the arguments are empty
-        if(!args[0]) {
-            message.channel.send("You can't play the fucking air moron")
-            return;
-        }
         // Checks if user is in a voice chat
         if(!VoiceChannel) {
-            message.channel.send('How about you try joining a vc first ya faggot?')
+            message.channel.send('How about you try joining a vc first ya faggot? :)')
             return;
         }
-
+        // Checks if the arguments are empty
+        else if(!args[0]) {
+            message.channel.send("You can't play the fucking air moron :)")
+            return;
+        }
+        
         // Sets a server's music queue
         if(!servers[message.guild.id]) servers[message.guild.id] = {
             queue: []
@@ -38,14 +38,14 @@ module.exports = {
         function play(connection, message) {
             var server = servers[message.guild.id];
 
-                // Adds song to queue
-                const stream = ytdl(server.queue[0], {filter : 'audioonly'});
-                // Adds arguments to a video
-                const streamOptions = {volume: 1, quality: 'highestaudio', highWaterMark: 1<<25};
-
-            // plays the video by calling stream and streamOptions
-            server.dispatcher = connection.playStream(stream, streamOptions);
-
+            // plays the video in queue and passes settings args
+            server.dispatcher = connection.playStream(ytdl(server.queue[0]), {
+                filter: "audioonly",
+                quality: 'highestaudio',
+                volume: 1,
+                highWaterMark: 1<<25
+            });
+            
             server.queue.shift();
 
             server.dispatcher.on('end', function() {
