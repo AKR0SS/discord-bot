@@ -4,15 +4,6 @@
 
 uh, there's totally no bad words in here :)
 
- > config.json is not listed in the repository, but may eventually if I add things other than prefix and my bot token :)
-
- ```json
- {
-    "prefix": "|",
-    "token": "[your-bot-token]"
-}
-```
-
 ## Command list
 
 
@@ -24,3 +15,13 @@ uh, there's totally no bad words in here :)
 
 ### @ADMINISTRATOR commands
 * kicks mentioned user: `kick [@user]`
+## 
+
+> config.json is not listed in the repository so here is the code in the file
+
+ ```json
+ {
+    "prefix": "|",
+    "token": "[your-bot-token]"
+}
+```
