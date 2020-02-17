@@ -1,8 +1,6 @@
-# Discord Bot
+# Kumiko Discord Bot
 
-
-
-uh, there's totally no bad words in here :)
+if you're a lil bitch and sensetive to words, this bot is probably not for you :)
 
 ## Command list
 
