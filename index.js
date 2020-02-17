@@ -48,7 +48,7 @@ client.on('message', message => {
 // @EVERYONE
     switch(command) {
         case 'help':
-            client.commands.get('help').execute(message, args);
+            client.commands.get('help').execute(message, client);
             break;
         case 'join':
             client.commands.get('join').execute(message);
