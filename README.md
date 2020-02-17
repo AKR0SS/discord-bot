@@ -23,6 +23,7 @@ uh, there's totally no bad words in here :)
  ```json
  {
     "prefix": "|",
-    "token": "[your-bot-token]"
+    "token": "[your-bot-token]",
+    "version": "1.0.4"
 }
 ```
