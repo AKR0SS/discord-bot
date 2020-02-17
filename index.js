@@ -5,7 +5,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 
 // checks for required config.json
-const { prefix, token } = require('./config.json');
+const { prefix, token, version } = require('./config.json');
 
 // creates new Discord client
 var client = new Discord.Client();
@@ -26,11 +26,11 @@ for (const file of commandFiles) {
 // this event will only trigger one time after logging in
 client.once('ready', () => {
     console.log('\n',
-    '/***************************/\n',
-    '/                           /\n',
-    '/        NOW ONLINE         /\n',
-    '/                           /\n',
-    '/***************************/');
+    '/****************************************/\n',
+    '/                                        /\n',
+    '/      ' + client.user.username + ' v' + version +' is now Online      /\n',
+    '/                                        /\n',
+    '/****************************************/\n');
     client.user.setActivity("Akross's alt ego")
 });
 
