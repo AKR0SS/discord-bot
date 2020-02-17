@@ -10,10 +10,10 @@ uh, there's totally no bad words in here :)
 
 
 ### @EVERYONE commands:
-⋅⋅⋅help command: `help`
-⋅⋅⋅join voice channel: `join`
-⋅⋅⋅plays a YouTube video: `play [YouTube link]`
-⋅⋅⋅skips current queue'd song: `skip`
+* help command: `help`
+* join voice channel: `join`
+* plays a YouTube video: `play [YouTube link]`
+* skips current queue'd song: `skip`
 
 ### @ADMINISTRATOR commands
-⋅⋅⋅kicks mentioned user: `kick [@user]`
+* kicks mentioned user: `kick [@user]`
