@@ -28,7 +28,7 @@ client.once('ready', () => {
     console.log('\n',
     '/****************************************/\n',
     '/                                        /\n',
-    '/      ' + client.user.username + ' v' + version +' is now Online      /\n',
+    '/       ' + client.user.username + ' v' + version +' is now Online      /\n',
     '/                                        /\n',
     '/****************************************/\n');
     client.user.setActivity("Akross's alt ego")
@@ -45,7 +45,7 @@ client.on('message', message => {
     const args = message.content.substring(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
     
-// @EVERYONE
+// EVERYONE
     switch(command) {
         case 'help':
             client.commands.get('help').execute(message, client);
