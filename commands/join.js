@@ -25,7 +25,7 @@ module.exports = {
             return;
         }
         else {
-            message.channel.send('but.. you said to join and I did, but then you left me.. fuking simp :)')
+            message.channel.send('but.. you said to join and I did.... fuking simp :)')
         }
     }
 }
