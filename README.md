@@ -6,15 +6,13 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 
 ## Command list
 
-### Command Prefix: |
-
-#### @EVERYONE commands:
+#### @EVERYONE commands: |
 * help command: `help`
 * join voice channel: `join`
 * plays a YouTube video: `play [YouTube link]`
 * skips current queue'd song: `skip`
 
-#### @ADMINISTRATOR commands
+#### @ADMINISTRATOR commands: k!
 * kicks mentioned user: `kick [@user]`
 ## 
 
@@ -23,6 +21,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
  ```json
  {
     "prefix": "|",
+    "adminPrefix": "k!",
     "token": "[your-bot-token]",
     "version": "1.1.0"
 }
