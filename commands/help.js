@@ -11,10 +11,7 @@ module.exports = {
                 icon_url: client.user.avatarURL
             },
             description: `${message.author.username} is a simp and needs help :)`,
-            fields: [ {
-                name: 'Command Prefix:',
-                value: prefix + ' for server commands\n' + adminPrefix + ' for administrator commands'
-            },
+            fields: [
             {
                 name: 'Commands',
                 value: '`help`\n`join`',
@@ -32,7 +29,7 @@ module.exports = {
             },
             {
                 name: 'Links:',
-                value: '[Github](https://github.com/AKR0SS/discord-bot) | [Discord](https://discord.gg/ANgfZVa)'
+                value: '[Github](https://github.com/AKR0SS/Kumiko-Discord-Bot) | [Discord](https://discord.gg/ANgfZVa)'
             }
             ],
             timestamp: new Date(),
