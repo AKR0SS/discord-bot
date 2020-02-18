@@ -1,6 +1,8 @@
 # Kumiko Discord Bot 
 
-if you're a lil bitch and sensetive to words, this bot is probably not for you :) ![alt text](https://i.imgur.com/Gpd8H1W.png " ")
+if you're a lil bitch and sensetive to words, this bot is probably not for you :) 
+
+![alt text](https://i.imgur.com/Gpd8H1W.png " ")
 
 ## Command list
 
