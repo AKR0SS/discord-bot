@@ -27,3 +27,5 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
     "version": "1.1.0"
 }
 ```
+
+#### This is my first time learning js, if you have any tips please say so :)
