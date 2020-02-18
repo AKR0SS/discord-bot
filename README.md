@@ -1,6 +1,4 @@
-# Kumiko Discord Bot
-
-![alt text](https://i.imgur.com/WzJCDnn.jpg " ")
+# Kumiko Discord Bot ![alt text](https://i.imgur.com/Gpd8H1W.png " ")
 
 if you're a lil bitch and sensetive to words, this bot is probably not for you :)
 
