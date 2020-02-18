@@ -1,8 +1,10 @@
 module.exports = {
-    name: 'stop',
-    description: 'stops the music currently playing',
-    execute(message, args) {
-        let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
+    name: 'skip',
+    description: 'skips the video currently playing',
+    execute(message, servers) {
+        var server = servers[message.guild.id];
 
+        if(server.dispactacher) 
+            server.dispatcher.end();
     }
 }
