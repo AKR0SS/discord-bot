@@ -23,7 +23,6 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
  ```json
  {
     "prefix": "|",
-    "adminPrefix": "k!",
     "token": "[your-bot-token]",
     "version": "1.1.0"
 }
