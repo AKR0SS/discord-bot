@@ -24,6 +24,6 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
  {
     "prefix": "|",
     "token": "[your-bot-token]",
-    "version": "1.0.4"
+    "version": "1.1.0"
 }
 ```
