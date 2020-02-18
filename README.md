@@ -12,7 +12,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * plays a YouTube video: `play [YouTube link]`
 * skips current queue'd song: `skip`
 
-#### @ADMINISTRATOR commands: k!
+#### @ADMINISTRATOR commands: k|
 * kicks mentioned user: `kick [@user]`
 ## 
 
