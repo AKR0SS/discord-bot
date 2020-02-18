@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 name: 'Music',
-                value: '`|play <YouTube Link>`\n`|skip`',
+                value: '`|play <YouTube Link>`\n`|skip`\n`|stop`',
                 inline: true
             },
             {
