@@ -10,12 +10,6 @@ module.exports = {
             return;
         }
         
-        if(client.voiceChannelID != VoiceChannel){
-            //message.channel.send(client.voiceChannelID)
-            //message.channel.send(VoiceChannel)
-            //return;
-        }
-
         if(!message.guild.voiceConnection)  {
             VoiceChannel.join()
 
