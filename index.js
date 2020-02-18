@@ -58,7 +58,10 @@ client.on('message', message => {
             client.commands.get('play').execute(message, args, servers);
             break;
         case 'skip':
-            client.commands.get('skip').execute(message, args, servers);
+            client.commands.get('skip').execute(message, servers);
+            break;
+        case 'stop':
+            client.commands.get('stop').execute(message, servers);
             break;
         default:
     // ADMINISTRATOR
