@@ -9,12 +9,11 @@ module.exports = {
             message.channel.send('How about you try joining a vc first ya faggot? :)')
             return;
         }
-        
+
         if(!message.guild.voiceConnection)  {
             VoiceChannel.join()
 
             message.channel.send(message.author + " is a simp feeling lonely without a girlfriend so they've got a bot to join 'em, me :)")
-            //message.channel.send(VoiceChannel)
 
             return;
         }
