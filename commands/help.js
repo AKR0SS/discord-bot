@@ -1,4 +1,4 @@
-const { version } = require('F:/Programming/discord-bot/config.json');
+const { prefix, adminPrefix, version } = require('F:/Programming/discord-bot/config.json');
 
 module.exports = {
     name: 'help',
@@ -11,24 +11,28 @@ module.exports = {
                 icon_url: client.user.avatarURL
             },
             description: `${message.author.username} is a simp and needs help :)`,
-            fields: [{
+            fields: [ {
+                name: 'Command Prefix:',
+                value: prefix + ' for server commands\n' + adminPrefix + ' for administrator commands'
+            },
+            {
                 name: 'Commands',
-                value: '`|help`\n`|join`',
+                value: '`help`\n`join`',
                 inline: true
             },
             {
                 name: 'Music',
-                value: '`|play <YouTube Link>`\n`|skip`\n`|stop`',
+                value: '`play <YouTube Link>`\n`skip`\n`stop`',
                 inline: true
             },
             {
                 name: 'Admin',
-                value: '`|kick <@user>`',
+                value: '`kick <@user>`',
                 inline: true
             },
             {
                 name: 'Links:',
-                value: '[Github](https://github.com/AKR0SS/discord-bot)'
+                value: '[Github](https://github.com/AKR0SS/discord-bot) | [Discord](https://discord.gg/ANgfZVa)'
             }
             ],
             timestamp: new Date(),
