@@ -55,15 +55,10 @@ client.on('message', message => {
             break;
         // MUSIC
         case 'play':
-            // Lazy way to check if it is a YouTube link
-            if (message.content.startsWith(prefix + 'play https://youtu.be/') || message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=')) {
-                client.commands.get('play').execute(message, args, servers);
-            }
-            else 
-                message.channel.send('thats.. not a link retard :)')
+            client.commands.get('play').execute(message, args, servers);
             break;
         case 'skip':
-            client.commands.get('skip').execute(message, servers);
+            client.commands.get('skip').execute(message, servers, client);
             break;
         case 'stop':
             client.commands.get('stop').execute(message, servers);
