@@ -5,16 +5,6 @@ module.exports = {
     description: 'plays music from youtube',
     alias: 'p',
     execute(message, args, servers) {
-        // Lazy ass way of checking if something is a youtube link
-        if (!message.content.startsWith('|play https://www.youtube.com/watch?v=')) {
-            message.channel.send("that's.. not a youtube video retard :)")
-            return;
-        } 
-        else if (!message.content.startsWith('|play https://youtu.be/')) {
-            message.channel.send("that's.. not a youtube video retard :)")
-            return;
-        }
-
         // VoiceChannel gets the user's current voice channel
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
 
