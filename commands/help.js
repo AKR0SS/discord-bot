@@ -1,4 +1,4 @@
-const { prefix, adminPrefix, version } = require('F:/Programming/discord-bot/config.json');
+const { version } = require('F:/Programming/discord-bot/config.json');
 
 module.exports = {
     name: 'help',
