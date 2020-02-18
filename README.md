@@ -1,5 +1,7 @@
 # Kumiko Discord Bot
 
+![alt text](https://i.imgur.com/WzJCDnn.jpg " ")
+
 if you're a lil bitch and sensetive to words, this bot is probably not for you :)
 
 ## Command list
