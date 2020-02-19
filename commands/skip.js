@@ -10,11 +10,7 @@ module.exports = {
             return;
         }
         // Checks if bot is in voice channel
-        else if(VoiceChannel !== client.voiceChannelID) {
-            message.channel.send('Try joining me and then skipping a song nerd :)')
-            return;
-        }
-
+        
         var server = servers[message.guild.id];
 
         if(server.dispatcher) {
