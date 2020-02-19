@@ -12,7 +12,8 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * help command: `help`
 * join voice channel: `join`
 * plays a YouTube video: `play [YouTube link]`
-* skips current queue'd song: `skip`
+* skips current queue'd YouTube video: `skip`
+* clears and stops playing YouTube video: `stop`
 
 #### @ADMINISTRATOR
 * kicks mentioned user: `kick [@user]`
