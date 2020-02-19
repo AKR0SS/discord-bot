@@ -13,6 +13,8 @@ module.exports = {
 
             server.dispatcher.end();
         }
+        else
+            message.channel.send("I can't stop something that isn't playing fag :)")
 
         // If connected, dc from vc
         if(message.guild.connection)
