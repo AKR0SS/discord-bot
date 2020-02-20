@@ -68,11 +68,11 @@ module.exports = {
             }
         }
         else if(!message.content.startsWith('|play https://www.youtube.com/watch?v=')) {
-            message.channel.send('not a video')
+            message.channel.send("That's.. not a YouTube video fukin faggot :)")
             return;
         }
         else if (!message.content.startsWith('|play https://youtu.be/')) {
-            message.channel.send('not a video')
+            message.channel.send("That's.. not a YouTube video fukin queer :)")
             return;
         }
         else
