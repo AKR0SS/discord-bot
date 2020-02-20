@@ -55,7 +55,7 @@ client.on('message', message => {
             break;
         // MUSIC
         case 'play':
-            client.commands.get('play').execute(message, args, servers);
+            client.commands.get('play').execute(message, args, servers, client);
             break;
         case 'skip':
             client.commands.get('skip').execute(message, servers, client);
