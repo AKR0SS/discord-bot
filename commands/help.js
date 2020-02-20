@@ -12,25 +12,25 @@ module.exports = {
             },
             description: `${message.author.username} is a simp and needs help :)`,
             fields: [
-            {
-                name: 'Commands',
-                value: '`help`\n`join`',
-                inline: true
-            },
-            {
-                name: 'Music',
-                value: '`play <YouTube Link>`\n`skip`\n`stop`',
-                inline: true
-            },
-            {
-                name: 'Admin',
-                value: '`kick <@user>`',
-                inline: true
-            },
-            {
-                name: 'Links:',
-                value: '[Github](https://github.com/AKR0SS/Kumiko-Discord-Bot) | [Discord](https://discord.gg/ANgfZVa)'
-            }
+                {
+                    name: 'Commands',
+                    value: '`help`\n`join`',
+                    inline: true
+                },
+                {
+                    name: 'Music',
+                    value: '`play <YouTube Link>`\n`skip`\n`stop`',
+                    inline: true
+                },
+                {
+                    name: 'Admin',
+                    value: '`kick <@user>`',
+                    inline: true
+                },
+                {
+                    name: 'Links:',
+                    value: '[Github](https://github.com/AKR0SS/Kumiko-Discord-Bot) | [Discord](https://discord.gg/ANgfZVa)'
+                }
             ],
             timestamp: new Date(),
             footer: {
