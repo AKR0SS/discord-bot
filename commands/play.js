@@ -21,7 +21,7 @@ module.exports = {
             return;
         }
         
-        if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play |play https://youtu.be/')) {
+        if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play https://youtu.be/')) {
             // Sets a server's music queue
             if(!servers[message.guild.id]) servers[message.guild.id] = {
                 queue: []
