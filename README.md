@@ -7,6 +7,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 ## Command list
 
 ##### Command Prefix: |
+###### [required argument] <optional argument>
 
 #### @EVERYONE
 * help command: `help`
@@ -14,9 +15,10 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * plays a YouTube video: `play [YouTube link]`
 * skips current queue'd YouTube video: `skip`
 * clears and stops playing YouTube video: `stop`
+* pauses a playing YouTube video: `pause`
 
 #### @ADMINISTRATOR
-* kicks mentioned user: `kick [@user]`
+* kicks mentioned user: `kick [@user] <reason>`
 ## 
 
 > config.json is not listed in the repository so here is the code in the file
