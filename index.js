@@ -5,7 +5,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 
 // checks for required config.json
-const { prefix, token, version } = require('./config.json');
+const { prefix, token, version, author } = require('./config.json');
 
 // creates new Discord client
 var client = new Discord.Client();
@@ -71,11 +71,11 @@ client.on('message', message => {
                         client.commands.get('kick').execute(message, args);
                         break;
                     default:
-                        return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
+                        return message.reply("I can't understand simp :)")
                 }
             }
             else
-                return message.reply('Either ' + message + ' is not a command or you are retarded, please see |help :)')
+                return message.reply("I can't understand simp :)")
     }
 
     //message.channel.send("```DEBUG```" + `\nCommand: ${command}\n Arguments: ${args}`);
