@@ -1,5 +1,4 @@
 const ytdl = require("ytdl-core");
-const Discord = require('discord.js');
 const { version } = require('F:/Programming/discord-bot/config.json');
 
 module.exports = {
