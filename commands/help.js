@@ -19,7 +19,7 @@ module.exports = {
                 },
                 {
                     name: 'Music',
-                    value: '`play <YouTube Link>`\n`skip`\n`stop`',
+                    value: '`play <YouTube Link>`\n`skip`\n`pause`\n`stop`',
                     inline: true
                 },
                 {
