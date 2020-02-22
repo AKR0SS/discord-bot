@@ -6,8 +6,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 
 ## Command list
 
-##### Command Prefix: |
-###### [required argument] <<optional argument>optional argument>
+##### Command Prefix: |COMMAND [required argument] <<optional argument>optional argument>
 
 #### @EVERYONE
 * help command: `help`
