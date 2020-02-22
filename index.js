@@ -63,12 +63,17 @@ client.on('message', message => {
         case 'stop':
             client.commands.get('stop').execute(message, servers);
             break;
+        case 'pause': //WIP
+            client.commands.get('pause').execute()
         default:
     // ADMINISTRATOR
             if (message.member.hasPermission('ADMINISTRATOR')) {
                 switch(command) {
                     case 'kick':
                         client.commands.get('kick').execute(message, args, client);
+                        break;
+                    case 'mute': //WIP
+                        client.commands.get('mute').execute()
                         break;
                     default:
                         return message.reply("I can't understand simp :)")
