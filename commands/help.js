@@ -19,12 +19,12 @@ module.exports = {
                 },
                 {
                     name: 'Music',
-                    value: '`play <YouTube Link>`\n`skip`\n`pause`\n`stop`',
+                    value: '`play <YouTube Link>`\n`pause`\n`skip`\n`stop`',
                     inline: true
                 },
                 {
                     name: 'Admin',
-                    value: '`kick [@user] <reason>`\n`mute` [@user] <amount>',
+                    value: '`kick [@user] <reason>`\n`mute [@user] <time>`',
                     inline: true
                 },
                 {
