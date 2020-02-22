@@ -19,6 +19,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 
 #### @ADMINISTRATOR
 * kicks mentioned user: `kick [@user] <reason>`
+* mutes or temp mutes a user: `mute [@user] <ammount of time>`
 ## 
 
 > config.json is not listed in the repository so here is the code in the file
