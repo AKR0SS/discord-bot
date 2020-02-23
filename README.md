@@ -15,6 +15,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * skips current queue'd YouTube video: `skip`
 * clears and stops playing YouTube video: `stop`
 * pauses a playing YouTube video: `pause`
+* resumes a playing Youtube video: `resume`
 
 #### @ADMINISTRATOR
 * kicks mentioned user: `kick [@user] <reason>`
