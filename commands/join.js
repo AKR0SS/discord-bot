@@ -1,7 +1,7 @@
 module.exports = {
     name: 'join',
     description: 'joins current voice chat',
-    execute(message, client) {
+    execute(message) {
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
     
         if(!VoiceChannel) {
