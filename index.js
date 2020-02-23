@@ -51,7 +51,7 @@ client.on('message', message => {
             client.commands.get('help').execute(message, client);
             break;
         case 'join':
-            client.commands.get('join').execute(message, client);
+            client.commands.get('join').execute(message);
             break;
         // MUSIC
         case 'play':
@@ -63,8 +63,12 @@ client.on('message', message => {
         case 'stop':
             client.commands.get('stop').execute(message, servers);
             break;
-        case 'pause': //WIP
-            client.commands.get('pause').execute()
+        case 'pause':
+            client.commands.get('pause').execute(message, servers)
+            break;
+        case 'resume': //WIP
+            client.commands.get('resume').execute(message, servers)
+            break;    
         default:
     // ADMINISTRATOR
             if (message.member.hasPermission('ADMINISTRATOR')) {
@@ -82,8 +86,6 @@ client.on('message', message => {
             else
                 return message.reply("I can't understand simp :)")
     }
-
-    //message.channel.send("```DEBUG```" + `\nCommand: ${command}\n Arguments: ${args}`);
 });
 
 // Discord login with app's token
