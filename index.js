@@ -66,7 +66,7 @@ client.on('message', message => {
         case 'pause':
             client.commands.get('pause').execute(message, servers)
             break;
-        case 'resume': //WIP
+        case 'resume':
             client.commands.get('resume').execute(message, servers)
             break;    
         default:
@@ -76,8 +76,8 @@ client.on('message', message => {
                     case 'kick':
                         client.commands.get('kick').execute(message, args, client);
                         break;
-                    case 'mute': //WIP
-                        client.commands.get('mute').execute()
+                    case 'mute':
+                        client.commands.get('mute').execute(message, args, client)
                         break;
                     default:
                         return message.reply("I can't understand simp :)")
