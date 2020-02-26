@@ -79,23 +79,33 @@ module.exports = {
 
         // Sends now playing message
         function nowPlaying(message) {
-            message.channel.send({embed: {
-                color: 16102856,
-                thumbnail: {
-                    url: ytdl.getInfo.thumbnail // idk how to get a thumbnail
-                },
-                fields: [
-                    {
-                        name: 'Now Playing',
-                        value: 'TITLE'//ytdl.getBasicInfo()
+            ytdl.getInfo(server.queue[0], (err, info) => {
+                if (err) throw err;
+
+                
+
+                message.channel.send({embed: {
+                    color: 16102856,
+                    thumbnail: {
+                        url: info.thumbnail_url
+                    },
+                    fields: [
+                        {
+                            name: 'Now Playing',
+                            value: info.title
+                        },
+                        {
+                            name: 'Song Length',
+                            value: ~~(info.length_seconds/60) + ':' + info.length_seconds%60
+                        }
+                    ],
+                    timestamp: new Date(),
+                    footer: {
+                        icon_url: client.user.avatarURL,
+                        text: 'v' + version
                     }
-                ],
-                timestamp: new Date(),
-                footer: {
-                    icon_url: client.user.avatarURL,
-                    text: 'v' + version
-                }
-            }});
+                }});
+            })
         }
     }
 }
