@@ -24,7 +24,7 @@ module.exports = {
                 },
                 {
                     name: 'Admin',
-                    value: '`kick [@user] <reason>`\n`mute [@user] <time>`',
+                    value: '`kick [@user] <reason>`\n`mute [@user] <reason>`\n`tempmute [@user] [timeLength]`',
                     inline: true
                 },
                 {
