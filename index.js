@@ -78,6 +78,9 @@ client.on('message', message => {
                         break;
                     case 'mute':
                         client.commands.get('mute').execute(message, args, client)
+                        break;    
+                    case 'tempmute':
+                        client.commands.get('tempmute').execute(message, args, client)
                         break;
                     default:
                         return message.reply("I can't understand simp :)")
