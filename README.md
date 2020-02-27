@@ -29,7 +29,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
     "prefix": "|",
     "token": "[your-bot-token]",
     "Author": "AKROSS",
-    "version": "1.2.0"
+    "version": "1.2.1"
 }
 ```
 
