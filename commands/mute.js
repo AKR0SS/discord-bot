@@ -7,6 +7,7 @@ module.exports = {
         let muteUser = message.guild.member(message.mentions.users.first());
         let muteReason = args.slice(1).join(' ');
 
+        // Checks if user exists
         if (!muteUser) {
             message.channel.send("That's not even a user, what am i paying you to be admin for cuck? :)")
             return;
