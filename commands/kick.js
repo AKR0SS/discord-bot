@@ -7,15 +7,18 @@ module.exports  = {
 		let kickUser = message.guild.member(message.mentions.users.first());
 		let kickReason = args.slice(1).join(' ');
 
+		// Checks if user exists
 		if (!kickUser) {
 			message.channel.send("That's not even a user, what am i paying you to be admin for cuck? :)")
 			return;
 		}
+		// Checks for kick reason
 		else if (!kickReason) {
 			message.channel.send("Cum on, what is the reason for it, you should be the one being kicked fag :)")
 			return;
 		}
 
+		// passes kicked member with reason
 		message.guild.member(kickUser).kick(kickReason)
 		kickEmbed(kickReason)
 
