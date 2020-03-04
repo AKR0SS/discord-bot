@@ -7,10 +7,10 @@ module.exports = {
         try {
             server.dispatcher.resume();
 
-            message.channel.send('video resumed')
+            message.channel.send("Fine, I'll resume it.. only becuase a faggot asked me to :)")
         }
         catch {
-            return message.channel.send("resume didn't work")
+            return message.channel.send("Yeah.. that didn't work moron :)")
         }
     }
 }
