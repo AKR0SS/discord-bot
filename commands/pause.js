@@ -7,10 +7,10 @@ module.exports = {
         try {
             server.dispatcher.pause();
 
-            message.channel.send('video paused')
+            message.channel.send("What're you retarded, why did you pause it? :)")
         }
         catch {
-            return message.channel.send("pause didn't work")
+            return message.channel.send("Oh no.. it's retarded, maybe actually try pausing something yeah? :)")
         }
     }
 }
