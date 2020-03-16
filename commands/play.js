@@ -4,20 +4,22 @@ const { version } = require('../config.json');
 module.exports = {
     name: 'play',
     description: 'plays music from youtube',
-    alias: 'p',
     execute(message, args, servers, client, prefix) {
+        try {
         // VoiceChannel gets the user's current voice channel
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
-
-        // Checks if user is in a voice chat
-        if(!VoiceChannel) {
-            message.channel.send('How about you try joining a vc first ya faggot? :)')
-            return;
         }
-        // Checks if the arguments are empty
-        else if(!args[0]) {
-            message.channel.send("You can't play the fucking air moron :)")
-            return;
+        catch {
+            // Checks if user is in a voice chat
+            if(!VoiceChannel) {
+                message.channel.send('How about you try joining a vc first ya faggot? :)')
+                return;
+            }
+            // Checks if the arguments are empty
+            else if(!args[0]) {
+                message.channel.send("You can't play the fucking air moron :)")
+                return;
+            }
         }
         
         if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play https://youtu.be/')) {
