@@ -20,6 +20,8 @@ module.exports = {
         }
         
         if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play https://youtu.be/')) {
+            
+
             // Sets a server's music queue
             if(!servers[message.guild.id]) servers[message.guild.id] = {
                 queue: []
@@ -38,6 +40,7 @@ module.exports = {
             /*if(server.queue[1]) {
                 nowPlaying(message)
             }*/
+            searching(message)
 
             // Called by execute
             function play(connection, message) {
@@ -103,6 +106,15 @@ module.exports = {
                         text: 'v' + version
                     }
                 }});
+            })
+        }
+
+        // Sends a confirmation message after sending a YouTube link
+        function searching(message) {
+            ytdl.getInfo(server.queue[0], (err, info) => {
+                if (err) throw err;
+
+                message.channel.send(`-> Found **${info.title}** \n` + `\`${args}\``)
             })
         }
     }
