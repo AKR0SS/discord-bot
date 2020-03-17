@@ -31,7 +31,7 @@ client.once('ready', () => {
     '/       ' + client.user.username + ' v' + version +' is now Online      /\n',
     '/                                        /\n',
     '/****************************************/\n');
-    client.user.setActivity("Akross's alt ego")
+    client.user.setActivity("|help :)")
 });
 
 var servers = {};
