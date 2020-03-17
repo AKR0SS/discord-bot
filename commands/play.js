@@ -5,21 +5,18 @@ module.exports = {
     name: 'play',
     description: 'plays music from youtube',
     execute(message, args, servers, client, prefix) {
-        try {
         // VoiceChannel gets the user's current voice channel
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
+        
+        // Checks if user is in a voice chat
+        if(!VoiceChannel) {
+            message.channel.send('How about you try joining a vc first ya faggot? :)')
+            return;
         }
-        catch {
-            // Checks if user is in a voice chat
-            if(!VoiceChannel) {
-                message.channel.send('How about you try joining a vc first ya faggot? :)')
-                return;
-            }
-            // Checks if the arguments are empty
-            else if(!args[0]) {
-                message.channel.send("You can't play the fucking air moron :)")
-                return;
-            }
+        // Checks if the arguments are empty
+        else if(!args[0]) {
+            message.channel.send("You can't play the fucking air moron :)")
+            return;
         }
         
         if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play https://youtu.be/')) {
@@ -38,9 +35,9 @@ module.exports = {
             });
 
             // Checks if it's the first song being queue'd and sends a now playing message
-            if(server.queue[1]) {
+            /*if(server.queue[1]) {
                 nowPlaying(message)
-            }
+            }*/
 
             // Called by execute
             function play(connection, message) {
@@ -58,7 +55,7 @@ module.exports = {
                     // Checks if songs are queue'd
                     if(server.queue[0]) {
                         nowPlaying(message)
-                        
+
                         play(connection, message)
                     }
                     else {
@@ -84,18 +81,17 @@ module.exports = {
             ytdl.getInfo(server.queue[0], (err, info) => {
                 if (err) throw err;
 
-                
-
                 message.channel.send({embed: {
                     color: 16102856,
+                    author: {
+                        name: 'Now Playing',
+                        icon_url: client.user.avatarURL
+                    },
                     thumbnail: {
                         url: info.thumbnail_url
                     },
+                    description: `[${info.title}](${args})`,
                     fields: [
-                        {
-                            name: 'Now Playing',
-                            value: info.title
-                        },
                         {
                             name: 'Song Length',
                             value: ~~(info.length_seconds/60) + ':' + info.length_seconds%60
