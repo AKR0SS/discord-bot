@@ -37,7 +37,7 @@ client.once('ready', () => {
     // Bot Activity
     let activities = [
         '|help :)',
-        `${client.guilds.members} servers :)`,
+        `${client.guilds.size} servers :)`,
         `${client.users.size} members :)`,
         "Akross's alt ego"
     ]
