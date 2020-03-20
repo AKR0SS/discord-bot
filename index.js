@@ -22,6 +22,14 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
+// Bot Activity
+let activities = [
+    '|help :)',
+    `${client.guilds.members} servers :)`,
+    `${client.users.size} members :)`,
+    "Akross's alt ego"
+]
+
 // when the client is ready, run this code
 // this event will only trigger one time after logging in
 client.once('ready', () => {
@@ -31,7 +39,11 @@ client.once('ready', () => {
     '/       ' + client.user.username + ' v' + version +' is now Online      /\n',
     '/                                        /\n',
     '/****************************************/\n');
-    client.user.setActivity("|help :)")
+
+    setInterval(() => {
+        let activity = activities[Math.floor(Math.random() * activities.length)]
+        client.user.setActivity(activity, {type: "WATCHING"})
+    }, 60000)
 });
 
 var servers = {};
