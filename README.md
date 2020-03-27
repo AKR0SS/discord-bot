@@ -1,4 +1,4 @@
-# ![Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=1014066238 " ") 
+# [Title](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=1014066238 "Kumiko Discord Bot") 
 
 if you're a lil bitch and sensetive to words, this bot is probably not for you :) 
 
