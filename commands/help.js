@@ -14,7 +14,7 @@ module.exports = {
             fields: [
                 {
                     name: 'Commands',
-                    value: '`help`\n`join`',
+                    value: '`help`\n`join\n`nhentai`',
                     inline: true
                 },
                 {
