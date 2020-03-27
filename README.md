@@ -19,8 +19,9 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * resumes a playing Youtube video: `resume`
 
 #### @ADMINISTRATOR
-* kicks mentioned user: `kick [@user] <reason>`
-* mutes or temp mutes a user: `mute [@user] <ammount of time>`
+* kicks mentioned user: `kick [@user] [reason]`
+* mutes a user: `mute [@user] <reason>`
+* temp mutes a user: `tempmute [@user] <reason>` (seems somewhat iffy for some reason)
 ## 
 
 > config.json is not listed in the repository so here is the code in the file
@@ -30,7 +31,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
     "prefix": "|",
     "token": "[your-bot-token]",
     "Author": "AKROSS",
-    "version": "1.2.1"
+    "version": "1.2.2"
 }
 ```
 
