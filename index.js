@@ -64,6 +64,9 @@ client.on('message', message => {
         case 'help':
             client.commands.get('help').execute(message, client);
             break;
+        case 'nhentai':
+            client.commands.get('nhentai').execute(message);
+            break;
         case 'join':
             client.commands.get('join').execute(message);
             break;
