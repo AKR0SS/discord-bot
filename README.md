@@ -11,6 +11,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 #### @EVERYONE
 * help command: `help`
 * join voice channel: `join`
+* sends a random nHentai link: `nhentai`
 * plays a YouTube video: `play [YouTube link]`
 * skips current queue'd YouTube video: `skip`
 * clears and stops playing YouTube video: `stop`
