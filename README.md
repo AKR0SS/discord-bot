@@ -1,6 +1,6 @@
-# [Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=1014066238) 
+# [Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=1014066238)
 
-if you're a lil bitch and sensetive to words, this bot is probably not for you :) 
+if you're a lil bitch and sensetive to words, this bot is probably not for you :)
 
 ![alt text](https://i.imgur.com/Gpd8H1W.png " ")
 
@@ -9,6 +9,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 ##### Command Prefix: |COMMAND [required argument] <<optional argument>optional argument>
 
 #### @EVERYONE
+
 * help command: `help`
 * join voice channel: `join`
 * sends a random nHentai link: `nhentai`
@@ -19,10 +20,10 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * resumes a playing Youtube video: `resume`
 
 #### @ADMINISTRATOR
+
 * kicks mentioned user: `kick [@user] [reason]`
 * mutes a user: `mute [@user] <reason>`
 * temp mutes a user: `tempmute [@user] <reason>` (seems somewhat iffy for some reason)
-## 
 
 > config.json is not listed in the repository so here is the code in the file
 
