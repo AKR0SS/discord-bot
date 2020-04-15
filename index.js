@@ -34,15 +34,21 @@ client.once('ready', () => {
     '/                                        /\n',
     '/****************************************/\n');
 
+    let serverCount = client.guilds.size;
+    let memberCount = client.users.size;
+
     // Bot Activity
     let activities = [
         '|help :)',
-        `${client.guilds.size} servers :)`,
-        `${client.users.size} members :)`,
+        serverCount + ' servers :)',
+        memberCount + ` members :)`,
         "Akross's alt ego"
     ]
 
     setInterval(() => {
+        serverCount = client.guilds.size;
+        memberCount = client.users.size;
+
         let activity = activities[Math.floor(Math.random() * activities.length)]
         client.user.setActivity(activity, {type: "WATCHING"})
     }, 60000)
