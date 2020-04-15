@@ -88,7 +88,7 @@ client.on('message', message => {
             break;    
         default:
     // ADMINISTRATOR
-            if (message.member.hasPermission('ADMINISTRATOR')) {
+            try { (message.member.hasPermission('ADMINISTRATOR'))
                 switch(command) {
                     case 'kick':
                         client.commands.get('kick').execute(message, args, client);
@@ -103,8 +103,9 @@ client.on('message', message => {
                         return message.reply("I can't understand simp :)")
                 }
             }
-            else
+            catch {
                 return message.reply("I can't understand simp :)")
+            }
     }
 });
 
