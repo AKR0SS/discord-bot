@@ -14,7 +14,7 @@ module.exports = {
             fields: [
                 {
                     name: 'Commands',
-                    value: '`help`\n`join\n`nhentai`',
+                    value: '`help`\n`join`\n`nhentai`',
                     inline: true
                 },
                 {
@@ -24,7 +24,7 @@ module.exports = {
                 },
                 {
                     name: 'Admin',
-                    value: '`kick [@user] <reason>`\n`mute [@user] <reason>`\n`tempmute [@user] [timeLength]`',
+                    value: '`kick [@user] <reason>`\n`mute [@user] <reason>`\n`tempmute [@user] <timeLength>`',
                     inline: true
                 },
                 {
