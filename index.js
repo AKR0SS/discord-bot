@@ -41,7 +41,7 @@ client.once('ready', () => {
     let activities = [
         '|help :)',
         serverCount + ' servers :)',
-        memberCount + ` members :)`,
+        memberCount + ' members :)',
         "Akross's alt ego"
     ]
 
@@ -70,28 +70,39 @@ client.on('message', message => {
         case 'help':
             client.commands.get('help').execute(message, client);
             break;
+
         case 'nhentai':
             client.commands.get('nhentai').execute(message);
             break;
+
         case 'join':
             client.commands.get('join').execute(message);
             break;
+
         // MUSIC
         case 'play':
             client.commands.get('play').execute(message, args, servers, client, prefix);
             break;
+            
+            case 'p':
+            client.commands.get('play').execute(message, args, servers, client, prefix);
+            break;
+
         case 'skip':
             client.commands.get('skip').execute(message, servers, client);
             break;
         case 'stop':
             client.commands.get('stop').execute(message, servers);
             break;
+
         case 'pause':
             client.commands.get('pause').execute(message, servers)
             break;
+
         case 'resume':
             client.commands.get('resume').execute(message, servers)
-            break;    
+            break;
+
         default:
     // ADMINISTRATOR
             try { (message.member.hasPermission('ADMINISTRATOR'))
@@ -99,12 +110,15 @@ client.on('message', message => {
                     case 'kick':
                         client.commands.get('kick').execute(message, args, client);
                         break;
+
                     case 'mute':
                         client.commands.get('mute').execute(message, args, client)
-                        break;    
+                        break;
+
                     case 'tempmute':
                         client.commands.get('tempmute').execute(message, args, client)
                         break;
+
                     default:
                         return message.reply("I can't understand simp :)")
                 }
