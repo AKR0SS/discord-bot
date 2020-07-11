@@ -62,10 +62,14 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     // Array of entered command
-    const args = message.content.substring(prefix.length).split(' ');
-    const command = args.shift().toLowerCase();
+    try {
+        const args = message.content.substring(prefix.length).split(' ');
+        const command = args.shift().toLowerCase();
+    }
+    catch {return};
     
 // EVERYONE
+try{
     switch(command) {
         case 'help':
             client.commands.get('help').execute(message, client);
@@ -127,7 +131,9 @@ client.on('message', message => {
                 return message.reply("I can't understand simp :)")
             }
     }
+} catch {};
 });
+
 
 // Discord login with app's token
 client.login(token);
