@@ -62,78 +62,75 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     // Array of entered command
-    try {
-        const args = message.content.substring(prefix.length).split(' ');
-        const command = args.shift().toLowerCase();
-    }
-    catch {return};
+    const args = message.content.substring(prefix.length).split(' ');
+    const command = args.shift().toLowerCase();
     
-// EVERYONE
-try{
-    switch(command) {
-        case 'help':
-            client.commands.get('help').execute(message, client);
-            break;
+    // EVERYONE
+    try{
+        switch(command) {
+            case 'help':
+                client.commands.get('help').execute(message, client);
+                break;
 
-        case 'nhentai':
-            client.commands.get('nhentai').execute(message);
-            break;
+            case 'nhentai':
+                client.commands.get('nhentai').execute(message);
+                break;
 
-        case 'join':
-            client.commands.get('join').execute(message);
-            break;
+            case 'join':
+                client.commands.get('join').execute(message);
+                break;
 
-        // MUSIC
-        case 'play':
-            client.commands.get('play').execute(message, args, servers, client, prefix);
-            break;
-            
-            case 'p':
-            client.commands.get('play').execute(message, args, servers, client, prefix);
-            break;
+            // MUSIC
+            case 'play':
+                client.commands.get('play').execute(message, args, servers, client, prefix);
+                break;
+                
+                case 'p':
+                client.commands.get('play').execute(message, args, servers, client, prefix);
+                break;
 
-        case 'skip':
-            client.commands.get('skip').execute(message, servers, client);
-            break;
-        case 'stop':
-            client.commands.get('stop').execute(message, servers);
-            break;
+            case 'skip':
+                client.commands.get('skip').execute(message, servers, client);
+                break;
+            case 'stop':
+                client.commands.get('stop').execute(message, servers);
+                break;
 
-        case 'pause':
-            client.commands.get('pause').execute(message, servers)
-            break;
+            case 'pause':
+                client.commands.get('pause').execute(message, servers)
+                break;
 
-        case 'resume':
-            client.commands.get('resume').execute(message, servers)
-            break;
+            case 'resume':
+                client.commands.get('resume').execute(message, servers)
+                break;
 
-        default:
-    // ADMINISTRATOR
-            try { (message.member.hasPermission('ADMINISTRATOR'))
-                switch(command) {
-                    case 'kick':
-                        client.commands.get('kick').execute(message, args, client);
-                        break;
+            default:
+        // ADMINISTRATOR
+                try { (message.member.hasPermission('ADMINISTRATOR'))
+                    switch(command) {
+                        case 'kick':
+                            client.commands.get('kick').execute(message, args, client);
+                            break;
 
-                    case 'mute':
-                        client.commands.get('mute').execute(message, args, client)
-                        break;
+                        case 'mute':
+                            client.commands.get('mute').execute(message, args, client)
+                            break;
 
-                    case 'tempmute':
-                        client.commands.get('tempmute').execute(message, args, client)
-                        break;
+                        case 'tempmute':
+                            client.commands.get('tempmute').execute(message, args, client)
+                            break;
 
-                    default:
-                        return message.reply("I can't understand simp :)")
+                        default:
+                            return message.reply("I can't understand simp :)")
+                    }
                 }
-            }
-            catch {
-                return message.reply("I can't understand simp :)")
-            }
-    }
-} catch {};
+                catch (e) {
+                    console.log(e);
+                    return message.reply("I can't understand simp :)")
+                }
+        }
+    } catch (e) {console.log(e)}
 });
-
 
 // Discord login with app's token
 client.login(token);
