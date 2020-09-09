@@ -14,12 +14,12 @@ module.exports = {
             fields: [
                 {
                     name: 'Commands',
-                    value: '`help`\n`join`\n`nhentai`',
+                    value: '`help` or `h`\n`join`\n`disconnect` or `dc`\n`nhentai`',
                     inline: true
                 },
                 {
                     name: 'Music',
-                    value: '`play [YouTube Link]`\n`resume`\n`pause`\n`skip`\n`stop`',
+                    value: '`play [YouTube Link]` or `p [YouTube Link]`\n`resume`\n`pause`\n`skip` or `s`\n`stop`',
                     inline: true
                 },
                 {
