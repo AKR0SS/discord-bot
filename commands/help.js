@@ -14,18 +14,15 @@ module.exports = {
             fields: [
                 {
                     name: 'Commands',
-                    value: '`help` or `h`\n`join`\n`disconnect` or `dc`\n`nhentai`',
-                    inline: true
+                    value: '`help` or `h`\n`join`\n`disconnect` or `dc`\n`nhentai`\n'
                 },
                 {
                     name: 'Music',
-                    value: '`play [YouTube Link]` or `p [YouTube Link]`\n`resume`\n`pause`\n`skip` or `s`\n`stop`',
-                    inline: true
+                    value: '`play [YouTube Link]` or `p [YouTube Link]`\n`resume`\n`pause`\n`skip` or `s`\n`stop`\n'
                 },
                 {
                     name: 'Admin',
-                    value: '`kick [@user] <reason>`\n`mute [@user] <reason>`\n`tempmute [@user] <timeLength>`',
-                    inline: true
+                    value: '`kick [@user] <reason>`\n`mute [@user] <reason>`\n`tempmute [@user] <timeLength>`\n'
                 },
                 {
                     name: 'Links:',
