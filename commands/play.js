@@ -20,7 +20,6 @@ module.exports = {
         }
         
         if (message.content.startsWith(prefix + 'play https://www.youtube.com/watch?v=') || message.content.startsWith(prefix + 'play https://youtu.be/')) {
-            
 
             // Sets a server's music queue
             if(!servers[message.guild.id]) servers[message.guild.id] = {
@@ -91,13 +90,13 @@ module.exports = {
                         icon_url: client.user.avatarURL
                     },
                     thumbnail: {
-                        url: info.thumbnail_url
+                        url: info.videoDetails.thumbnail_url
                     },
-                    description: `[${info.title}](${args})`,
+                    description: `[${info.videoDetails.title}](${args})`,
                     fields: [
                         {
                             name: 'Song Length',
-                            value: ~~(info.length_seconds/60) + ':' + info.length_seconds%60
+                            value: ~~(info.videoDetails.lengthSeconds/60) + ':' + info.videoDetails.lengthSeconds%60
                         }
                     ],
                     timestamp: new Date(),
@@ -114,7 +113,7 @@ module.exports = {
             ytdl.getInfo(server.queue[0], (err, info) => {
                 if (err) throw err;
 
-                message.channel.send(`-> Found **${info.title}** \n` + `\`${args}\``)
+                message.channel.send(`-> Found **${info.videoDetails.title}** \n` + `\`${args}\``)
             })
         }
     }
