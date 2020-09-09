@@ -92,6 +92,7 @@ client.on('message', message => {
             case 'skip':
                 client.commands.get('skip').execute(message, servers, client);
                 break;
+                
             case 'stop':
                 client.commands.get('stop').execute(message, servers);
                 break;
