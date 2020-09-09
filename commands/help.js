@@ -1,7 +1,7 @@
 const { version } = require('../config.json');
 
 module.exports = {
-    name: 'help',
+    name: 'help' || 'h',
     description: 'it uh, helps?',
     execute(message, client) {
         message.channel.send({embed: {

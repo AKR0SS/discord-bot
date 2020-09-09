@@ -2,7 +2,7 @@ const ytdl = require("ytdl-core");
 const { version } = require('../config.json');
 
 module.exports = {
-    name: 'play',
+    name: 'play' || 'p',
     description: 'plays music from youtube',
     execute(message, args, servers, client, prefix) {
         // VoiceChannel gets the user's current voice channel

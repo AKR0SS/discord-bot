@@ -72,6 +72,10 @@ client.on('message', message => {
                 client.commands.get('help').execute(message, client);
                 break;
 
+                case 'h':
+                    client.commands.get('help').execute(message, client);
+                    break;
+
             case 'nhentai':
                 client.commands.get('nhentai').execute(message);
                 break;
@@ -80,18 +84,30 @@ client.on('message', message => {
                 client.commands.get('join').execute(message);
                 break;
 
+            case 'disconnect':
+                client.commands.get('disconnect').execute(message);
+                break;
+
+                case 'dc':
+                client.commands.get('disconnect').execute(message);
+                break;
+
             // MUSIC
             case 'play':
                 client.commands.get('play').execute(message, args, servers, client, prefix);
                 break;
-                
+
                 case 'p':
-                client.commands.get('play').execute(message, args, servers, client, prefix);
-                break;
+                    client.commands.get('play').execute(message, args, servers, client, prefix);
+                    break;
 
             case 'skip':
                 client.commands.get('skip').execute(message, servers, client);
                 break;
+                
+                case 's':
+                    client.commands.get('skip').execute(message, servers, client);
+                    break;
                 
             case 'stop':
                 client.commands.get('stop').execute(message, servers);
