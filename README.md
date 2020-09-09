@@ -10,11 +10,12 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 
 #### @EVERYONE
 
-* help command: `help`
+* help command: `help` or `h`
 * join voice channel: `join`
+* leaves voice channel: `disconnect` or `dc`
 * sends a random nHentai link: `nhentai`
-* plays a YouTube video: `play [YouTube link]`
-* skips current queue'd YouTube video: `skip`
+* plays a YouTube video: `play [YouTube link]` or `p [YouTube link]`
+* skips current queue'd YouTube video: `skip` or `s`
 * clears and stops playing YouTube video: `stop`
 * pauses a playing YouTube video: `pause`
 * resumes a playing Youtube video: `resume`
