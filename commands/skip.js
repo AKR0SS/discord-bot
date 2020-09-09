@@ -1,7 +1,7 @@
 module.exports = {
     name: 'skip',
     description: 'skips the video currently playing',
-    execute(message, servers, client) {
+    execute(message, servers) {
         let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
         
         // Checks if user is in a voice channel
