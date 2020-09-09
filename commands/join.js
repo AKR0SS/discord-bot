@@ -9,10 +9,10 @@ module.exports = {
             message.channel.send('How about you try joining a vc first ya faggot? :)')
             return;
         }
-        VoiceChannel.join()
+        
         // Joins current discord voice channel
         try {
-            //VoiceChannel.join()
+            VoiceChannel.join()
 
             message.channel.send(message.author + " is a simp feeling lonely without a girlfriend so they've got a bot to join 'em, me :)")
 
