@@ -13,13 +13,11 @@ module.exports = {
         // Joins current discord voice channel
         try {
             VoiceChannel.join()
-
-            message.channel.send(message.author + " is a simp feeling lonely without a girlfriend so they've got a bot to join 'em, me :)")
-
-            return;
+            return message.channel.send(message.author + " is a simp feeling lonely without a girlfriend so they've got a bot to join 'em, me :)")
         }
-        catch {
+        catch (err) {
             message.channel.send("I.. I, don't know what to do with myself sorry :(")
+            return console.log(err);
         }
     }
 }

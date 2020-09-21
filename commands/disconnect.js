@@ -12,11 +12,11 @@ module.exports = {
 
         // Joins current discord voice channel
         try {
-            message.guild.voiceConnection.disconnect();
-            return;
+            return message.guild.voiceConnection.disconnect();
         }
-        catch {
+        catch (err) {
             message.channel.send("I.. I, don't know what to do with myself sorry :(")
+            return console.log(err);
         }
     }
 }

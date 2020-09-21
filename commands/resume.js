@@ -9,8 +9,9 @@ module.exports = {
 
             message.channel.send("Fine, I'll resume it.. only becuase a faggot asked me to :)")
         }
-        catch {
-            return message.channel.send("Yeah.. that didn't work moron :)")
+        catch (err) {
+            message.channel.send("Yeah.. that didn't work moron :)")
+            return console.log(err);
         }
     }
 }
