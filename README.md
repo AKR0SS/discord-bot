@@ -1,6 +1,6 @@
 # [Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=1014066238)
 
-if you're a lil bitch and sensetive to words, this bot is probably not for you :)
+this bot is meant to be offensive, please don't complain about it, that is the point of the bot lmao
 
 ![alt text](https://i.imgur.com/Gpd8H1W.png " ")
 
