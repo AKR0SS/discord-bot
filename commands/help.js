@@ -14,7 +14,7 @@ module.exports = {
             fields: [
                 {
                     name: 'Commands',
-                    value: '`help` or `h`\n`join`\n`disconnect` or `dc`\n`nhentai`\n'
+                    value: '`help` or `h`\n`join`\n`disconnect` or `dc`\n`nhentai`\n`8ball`'
                 },
                 {
                     name: 'Music',

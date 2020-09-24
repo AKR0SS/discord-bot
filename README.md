@@ -14,6 +14,7 @@ if you're a lil bitch and sensetive to words, this bot is probably not for you :
 * join voice channel: `join`
 * leaves voice channel: `disconnect` or `dc`
 * sends a random nHentai link: `nhentai`
+* ask a question to the mighty Kumiko: `8ball`
 * plays a YouTube video: `play [YouTube link]` or `p [YouTube link]`
 * skips current queue'd YouTube video: `skip` or `s`
 * clears and stops playing YouTube video: `stop`
