@@ -92,6 +92,10 @@ client.on('message', message => {
                 client.commands.get('disconnect').execute(message);
                 break;
 
+            case '8ball':
+                client.commands.get('8ball').execute(message, args, client);
+                break;
+
             // MUSIC
             case 'play':
                 client.commands.get('play').execute(message, args, servers, client, prefix);
