@@ -1,4 +1,4 @@
-# [Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=8)
+# [Kumiko Discord Bot](https://discordapp.com/oauth2/authorize?client_id=678287534773501959&scope=bot&permissions=3197960)
 ^ the above links you to the invite :)
 
 this bot is meant to be offensive, please don't complain about it, that is the point of the bot lmao
