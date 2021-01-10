@@ -34,10 +34,11 @@ this bot is meant to be offensive, please don't complain about it, that is the p
 
  ```json
  {
-    "prefix": "|",
-    "token": "[your-bot-token]",
-    "Author": "AKROSS",
-    "version": "1.3.1"
+    {
+    "prefix" : "!k",
+    "author" : "Akross",
+    "version": "2.0",
+    "token"  : "[your-bot-token]",
 }
 ```
 
