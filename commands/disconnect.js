@@ -1,22 +1,22 @@
 module.exports = {
     name: 'disconnect' || 'dc',
     description: 'disconnects from current voice chat',
-    execute(message) {
-        let VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
-    
+    execute(message, args, client) {
+        const VoiceChannel = message.guild.channels.find(channel => channel.id === message.member.voiceChannelID);
+
         // Checks if a user is not in a voice channel
         if(!VoiceChannel) {
-            message.channel.send("How about you try joining a vc first ya faggot? :)")
+            message.channel.send('You need to be in a Voice Channel to use this command');
             return;
         }
 
-        // Joins current discord voice channel
+        // Disconnects from current discord voice channel
         try {
             return message.guild.voiceConnection.disconnect();
         }
-        catch (err) {
-            message.channel.send("I.. I, don't know what to do with myself sorry :(")
-            return console.log(err);
+        catch (error) {
+            message.channel.send('I.. I, don\'t know what to do with myself sorry :(');
+            return console.log(error);
         }
-    }
-}
+    },
+};
