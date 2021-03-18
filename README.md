@@ -33,12 +33,12 @@ this bot is meant to be offensive, please don't complain about it, that is the p
 > config.json is not listed in the repository so here is the code in the file
 
  ```json
- {
-    {
+{
     "prefix" : "!k",
     "author" : "Akross",
-    "version": "2.0",
-    "token"  : "[your-bot-token]",
+    "version": "2.12",
+    "token"  : "[your-token]",
+    "YTAPI"  : "[your-token]"
 }
 ```
 
